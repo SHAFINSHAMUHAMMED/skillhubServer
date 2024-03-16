@@ -32,18 +32,17 @@ app.post('/pdfsend', upload.single('file'), async (req, res) => {
 
   // SMTP configuration for your domain
   const transporter = nodemailer.createTransport({
-    host: "api.skillhubinstitute.com", // Correct SMTP server hostname
+    host: "smtp.gmail.com", // Correct SMTP server hostname
     port: 465, // Secure port for SSL/TLS
     secure: true, // true for 465, other ports false
     auth: {
-      user: "test@api.skillhubinstitute.com", // Your full email address
-      pass: "Skillhub@7866" // Your email account password
+      user: "info@skillhubinstitute.com", // Your full email address
+      pass: "osgr gewx hpaj jyra" // Your email account password
     }
   });
-  
 
   const mailOptions = {
-    from: 'test@api.skillhubinstitute.com',
+    from: 'info@skillhubinstitute.com',
     to: 'info@skillhubinstitute.com',
     subject: 'Registration form',
     text: 'Attached is the PDF you requested.',
